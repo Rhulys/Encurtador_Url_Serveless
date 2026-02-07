@@ -9,13 +9,13 @@ Toda a infraestrutura é simulada localmente utilizando o LocalStack, permitindo
 - **Linguagem:** TypeScript
 - **Framework de Infraestrutura:** AWS CDK (Cloud Development Kit)
 - **Runtime:** Node.js 18.x
-- **Serviços AWS (Simulados):**
-    Lambda: Processamento da lógica de negócio.
-    DynamoDB: Banco de dados NoSQL para persistência de URLs e contador de cliques.
+- **Serviços AWS (Simulados):** <br>
+    Lambda: Processamento da lógica de negócio.<br>
+    DynamoDB: Banco de dados NoSQL para persistência de URLs e contador de cliques.<br>
     API Gateway: Gerenciamento de rotas e exposição dos endpoints REST.
-- **Ferramentas de Desenvolvimento:**
-    localstack & cdklocal
-    esbuild (para bundling da Lambda)
+- **Ferramentas de Desenvolvimento:**<br>
+    localstack & cdklocal<br>
+    esbuild (para bundling da Lambda)<br>
     nanoid (para geração de IDs únicos)
 
 ## 📌 Funcionalidades
@@ -26,23 +26,23 @@ Toda a infraestrutura é simulada localmente utilizando o LocalStack, permitindo
 
 ## 🔧 Como Executar
 
-1. Pré-requisitos
-    Docker e LocalStack instalados.
-    Node.js e NPM.
-    AWS CDK e cdklocal instalados.
-2. Iniciar o Ambiente Local
-    `localstack start -d`
-3. Instalar Dependências
-    `npm install`
-4. Deploy da Infraestrutura
+1. Pré-requisitos<br>
+    Docker e LocalStack instalados.<br>
+    Node.js e NPM.<br>
+    AWS CDK e cdklocal instalados.<br>
+2. Iniciar o Ambiente Local<br>
+    `localstack start -d`<br>
+3. Instalar Dependências<br>
+    `npm install`<br>
+4. Deploy da Infraestrutura<br>
     `cdklocal deploy`
 
 ## ⚡ Exemplos de Uso
-- **Criar URL Encurtada**
+- **Criar URL Encurtada**<br>
 `curl -X POST https://[API-ID].execute-api.localhost.localstack.cloud:4566/prod/ \-H "Content-Type: application/json" \-d '{"url": "https://google.com"}'`
-- **Acessar URL (Redirecionamento)**
+- **Acessar URL (Redirecionamento)**<br>
 `curl -i https://[API-ID].execute-api.localhost.localstack.cloud:4566/prod/[CÓDIGO]`
-- **Consultar Estatísticas**
+- **Consultar Estatísticas**<br>
 `curl -i https://[API-ID].execute-api.localhost.localstack.cloud:4566/prod/stats/[CÓDIGO]`
 
 ## 🧠 Aprendizados Relevantes
